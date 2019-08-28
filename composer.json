@@ -1,9 +1,10 @@
 {
-    "name": "laravel/laravel",
+    "name": "danielbachhuber/simple-event-tracking",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Simple, no-fuss Laravel application for key-value event tracking.",
     "keywords": [
-        "framework",
+        "event tracking",
+        "analytics",
         "laravel"
     ],
     "license": "MIT",
