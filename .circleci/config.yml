@@ -1,0 +1,60 @@
+version: 2
+workflows:
+  version: 2
+  main:
+    jobs:
+      - test
+jobs:
+  test:
+    docker:
+      - image: circleci/php:7.3-node-browsers
+    working_directory: ~/laravel
+    steps:
+      - checkout
+      - run:
+          name: "Install System Dependencies"
+          command: |
+            sudo docker-php-ext-install bcmath
+      - run:
+          name: "Set Up Environment Variables"
+          command: |
+            cp .env.testing .env
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "composer.json" }}
+      - run:
+          name: "Install Composer Dependencies"
+          command: |
+            composer install -n --prefer-dist
+      - save_cache:
+          key: v1-dependencies-{{ checksum "composer.json" }}
+          paths:
+            - vendor
+      - restore_cache:
+          keys:
+            - node-v1-{{ checksum "package.json" }}
+      - run:
+          name: "Install JavaScript Dependencies"
+          command: |
+            npm install
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: "Run PHPCS"
+          command: |
+            composer phpcs
+      - run:
+          name: "Build static assets"
+          command: |
+            npm run prod
+      - run:
+          name: "Configure testing database"
+          command: |
+            touch storage/testing.sqlite
+            php artisan migrate --env=testing --database=sqlite_testing --force
+      - run:
+          name: "Run PHP Tests"
+          command: |
+            composer test
