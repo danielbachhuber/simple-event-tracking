@@ -26,6 +26,10 @@ class EventReadControllerTest extends TestCase
             'value' => 'bar',
             'group' => 'baz',
         ]))->save();
+        (new Event([
+            'key'   => 'foo',
+            'value' => 'apple',
+        ]))->save();
         putenv('SET_ACCESS_TOKEN=');
     }
 
@@ -38,7 +42,7 @@ class EventReadControllerTest extends TestCase
         $response->assertStatus(401);
     }
 
-    public function testKeyValueAreRequired()
+    public function testKeyIsRequired()
     {
         putenv('SET_ACCESS_TOKEN=123abc');
         $response = $this->json('GET', '/api/read', [], [
@@ -50,16 +54,34 @@ class EventReadControllerTest extends TestCase
                 'errors' => [
                     'key'   => [
                         'The key field is required.',
-                    ],
-                    'value' => [
-                        'The value field is required.',
                     ]
                 ]
             ]);
     }
 
+    public function testGetOnlyKey()
+    {
+        putenv('SET_ACCESS_TOKEN=123abc');
+        $response = $this->json(
+            'GET',
+            '/api/read',
+            [
+                'key'   => 'foo',
+            ],
+            [
+                'HTTP_Authorization' => 'Bearer 123abc'
+            ]
+        );
+        $response->assertStatus(200)
+                  ->assertExactJson([
+                    'bar'   => 3,
+                    'apple' => 1,
+                  ]);
+    }
+
     public function testGetWithoutGroup()
     {
+        $this->withoutExceptionHandling();
         putenv('SET_ACCESS_TOKEN=123abc');
         $response = $this->json(
             'GET',
