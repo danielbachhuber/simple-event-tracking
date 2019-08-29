@@ -18,7 +18,7 @@ class EventWriteController extends Controller
         $validated = $request->validate(
             [
                 'key'   => 'required|max:255',
-                'value' => 'max:255',
+                'value' => 'required|max:255',
                 'group' => 'max:255',
             ]
         );

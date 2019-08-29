@@ -20,7 +20,7 @@ class EventWriteControllerTest extends TestCase
                  ->assertExactJson(['status' => 'ok']);
     }
 
-    public function testNameIsRequired()
+    public function testKeyIsRequired()
     {
         $response = $this->json('POST', '/api/write', [
             'value' => '123',
@@ -31,6 +31,22 @@ class EventWriteControllerTest extends TestCase
                 'errors' => [
                     'key' => [
                         'The key field is required.',
+                    ]
+                ]
+            ]);
+    }
+
+    public function testValueIsRequired()
+    {
+        $response = $this->json('POST', '/api/write', [
+            'key' => 'foo',
+        ]);
+        $response
+            ->assertStatus(422)
+            ->assertJson([
+                'errors' => [
+                    'value' => [
+                        'The value field is required.',
                     ]
                 ]
             ]);
