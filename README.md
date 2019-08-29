@@ -1,9 +1,7 @@
 Simple Event Tracking
 =====================
 
-Sometimes, all you need to do is track how often an event occurs.
-
-But, Google Analytics returns this data too slowly and Mixpanel is too expensive.
+Sometimes, all you need to do is track how often an event occurs. But, Google Analytics returns this data too slowly and Mixpanel is too expensive.
 
 Simple Event Tracking is a Laravel application you can use for logging events, and then querying how often they occur (with realtime results).
 
