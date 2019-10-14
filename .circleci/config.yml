@@ -8,6 +8,11 @@ jobs:
   test:
     docker:
       - image: circleci/php:7.3-node-browsers
+      - image: circleci/mariadb:10.3
+        environment:
+          MYSQL_DATABASE: set_test
+          MYSQL_USER: set_test
+          MYSQL_PASSWORD: set_test
     working_directory: ~/laravel
     steps:
       - checkout
@@ -15,6 +20,8 @@ jobs:
           name: "Install System Dependencies"
           command: |
             sudo docker-php-ext-install bcmath
+            sudo docker-php-ext-install pdo_mysql
+            sudo apt-get install mariadb-client-10.3
       - run:
           name: "Set Up Environment Variables"
           command: |
@@ -52,8 +59,7 @@ jobs:
       - run:
           name: "Configure testing database"
           command: |
-            touch storage/testing.sqlite
-            php artisan migrate --env=testing --database=sqlite_testing --force
+            php artisan migrate --env=testing --force
       - run:
           name: "Run PHP Tests"
           command: |
