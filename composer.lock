@@ -5932,16 +5932,16 @@
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
-            "version": "v2.7.0",
+            "version": "v2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirbrillig/phpcs-variable-analysis.git",
-                "reference": "1b1b2b503a19bb56fa75f4a2d959b12c8ed28c12"
+                "reference": "822db6b1963a7f81e68493ed6ad4652e419777dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/1b1b2b503a19bb56fa75f4a2d959b12c8ed28c12",
-                "reference": "1b1b2b503a19bb56fa75f4a2d959b12c8ed28c12",
+                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/822db6b1963a7f81e68493ed6ad4652e419777dd",
+                "reference": "822db6b1963a7f81e68493ed6ad4652e419777dd",
                 "shasum": ""
             },
             "require": {
@@ -5967,16 +5967,16 @@
             ],
             "authors": [
                 {
-                    "name": "Payton Swick",
-                    "email": "payton@foolord.com"
-                },
-                {
                     "name": "Sam Graham",
                     "email": "php-codesniffer-variableanalysis@illusori.co.uk"
+                },
+                {
+                    "name": "Payton Swick",
+                    "email": "payton@foolord.com"
                 }
             ],
             "description": "A PHPCS sniff to detect problems with variables.",
-            "time": "2019-06-24T23:57:11+00:00"
+            "time": "2019-10-10T23:00:08+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
