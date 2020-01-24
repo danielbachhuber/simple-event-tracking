@@ -2647,16 +2647,16 @@
         },
         {
             "name": "sentry/sentry-laravel",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getsentry/sentry-laravel.git",
-                "reference": "50eb00e825ce615a57408c7a5e3f2599686c5be9"
+                "reference": "6ccb88d2ef9e6c71ebdedadb59910843c47399e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getsentry/sentry-laravel/zipball/50eb00e825ce615a57408c7a5e3f2599686c5be9",
-                "reference": "50eb00e825ce615a57408c7a5e3f2599686c5be9",
+                "url": "https://api.github.com/repos/getsentry/sentry-laravel/zipball/6ccb88d2ef9e6c71ebdedadb59910843c47399e1",
+                "reference": "6ccb88d2ef9e6c71ebdedadb59910843c47399e1",
                 "shasum": ""
             },
             "require": {
@@ -2712,7 +2712,7 @@
                 "logging",
                 "sentry"
             ],
-            "time": "2020-01-23T09:52:27+00:00"
+            "time": "2020-01-23T22:19:01+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
