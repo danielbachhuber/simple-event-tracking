@@ -3336,10 +3336,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
-laravel-mix@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-5.0.3.tgz#fb977cde6e874e513ede50a25bf6fb8c497b2a65"
-  integrity sha512-ACuy4p0mK0VpWiFLW2WaoN7tH6hY5cw55OshgIbqG/PlSeQjmK8evrT69xVyDKnwOK9HXZTG7Lz7waMhvz29AQ==
+laravel-mix@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-5.0.4.tgz#606a28781b936d66cf96a0d631909cea22ebf0a8"
+  integrity sha512-/fkcMdlxhGDBcH+kFDqKONlAfhJinMAWd+fjQ+VLii4UzIeXUF5Q8FbS4+ZrZs9JO3Y1E4KoNq3hMw0t/soahA==
   dependencies:
     "@babel/core" "^7.2.0"
     "@babel/plugin-proposal-object-rest-spread" "^7.2.0"
