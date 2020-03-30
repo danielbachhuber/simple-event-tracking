@@ -43,7 +43,7 @@ jobs:
       - run:
           name: "Install JavaScript Dependencies"
           command: |
-            yarn install
+            npm install
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}
           paths:
