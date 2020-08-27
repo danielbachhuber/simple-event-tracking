@@ -3,13 +3,12 @@
 namespace Tests\Feature;
 
 use App\Event;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
 class EventReadControllerTest extends TestCase
 {
-
     public function setUp(): void
     {
         parent::setUp();
@@ -46,7 +45,7 @@ class EventReadControllerTest extends TestCase
     {
         putenv('SET_ACCESS_TOKEN=123abc');
         $response = $this->json('GET', '/api/read', [], [
-            'HTTP_Authorization' => 'Bearer 123abc'
+            'HTTP_Authorization' => 'Bearer 123abc',
         ]);
         $response
             ->assertStatus(422)
@@ -54,8 +53,8 @@ class EventReadControllerTest extends TestCase
                 'errors' => [
                     'key'   => [
                         'The key field is required.',
-                    ]
-                ]
+                    ],
+                ],
             ]);
     }
 
@@ -69,7 +68,7 @@ class EventReadControllerTest extends TestCase
                 'key'   => 'foo',
             ],
             [
-                'HTTP_Authorization' => 'Bearer 123abc'
+                'HTTP_Authorization' => 'Bearer 123abc',
             ]
         );
         $response->assertStatus(200)
@@ -91,7 +90,7 @@ class EventReadControllerTest extends TestCase
                 'value' => 'bar',
             ],
             [
-                'HTTP_Authorization' => 'Bearer 123abc'
+                'HTTP_Authorization' => 'Bearer 123abc',
             ]
         );
         $response->assertStatus(200)
@@ -110,7 +109,7 @@ class EventReadControllerTest extends TestCase
                 'group' => 'baz',
             ],
             [
-                'HTTP_Authorization' => 'Bearer 123abc'
+                'HTTP_Authorization' => 'Bearer 123abc',
             ]
         );
         $response->assertStatus(200)
