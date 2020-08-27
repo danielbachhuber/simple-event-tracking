@@ -14,7 +14,6 @@
         "laravel/framework": "^7.25",
         "laravel/tinker": "^2.0",
         "sentry/sentry-laravel": "^1.7",
-        "laravel/ui": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3"
     },
