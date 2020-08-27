@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Event;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EventReadController extends Controller
 {
@@ -17,7 +17,7 @@ class EventReadController extends Controller
     public function __invoke(Request $request)
     {
         $bearer_token = $request->bearerToken();
-        if (!$bearer_token || $bearer_token !== env('SET_ACCESS_TOKEN')) {
+        if (! $bearer_token || $bearer_token !== env('SET_ACCESS_TOKEN')) {
             return abort(401);
         }
         $request->validate(
@@ -30,11 +30,12 @@ class EventReadController extends Controller
             if ($request->has('group')) {
                 $query->where('group', $request->group);
             }
+
             return $query->count();
         }
         $results = DB::select(
             DB::raw(
-                "SELECT DISTINCT(value), COUNT(*) as count FROM events WHERE `key`=:key GROUP BY value"
+                'SELECT DISTINCT(value), COUNT(*) as count FROM events WHERE `key`=:key GROUP BY value'
             ),
             [
                 'key' => $request->key,
@@ -42,8 +43,9 @@ class EventReadController extends Controller
         );
         $response = [];
         foreach ($results as $result) {
-            $response[ $result->value ] = (int) $result->count;
+            $response[$result->value] = (int) $result->count;
         }
+
         return $response;
     }
 }

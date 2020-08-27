@@ -24,6 +24,7 @@ class EventWriteController extends Controller
         );
         $event = new Event($validated);
         $event->save();
+
         return ['status' => 'ok'];
     }
 }

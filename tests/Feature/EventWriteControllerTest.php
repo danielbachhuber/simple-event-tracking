@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
 class EventWriteControllerTest extends TestCase
 {
@@ -31,8 +31,8 @@ class EventWriteControllerTest extends TestCase
                 'errors' => [
                     'key' => [
                         'The key field is required.',
-                    ]
-                ]
+                    ],
+                ],
             ]);
     }
 
@@ -47,17 +47,17 @@ class EventWriteControllerTest extends TestCase
                 'errors' => [
                     'value' => [
                         'The value field is required.',
-                    ]
-                ]
+                    ],
+                ],
             ]);
     }
 
     public function testErrorIfValuesGreaterThan255()
     {
         $response = $this->json('POST', '/api/write', [
-            'key'   => str_pad( 'a', 300, 'a' ),
-            'value' => str_pad( 'a', 300, 'a' ),
-            'group' => str_pad( 'a', 300, 'a' ),
+            'key'   => str_pad('a', 300, 'a'),
+            'value' => str_pad('a', 300, 'a'),
+            'group' => str_pad('a', 300, 'a'),
         ]);
         $response
             ->assertStatus(422)
@@ -71,8 +71,8 @@ class EventWriteControllerTest extends TestCase
                     ],
                     'group' => [
                         'The group may not be greater than 255 characters.',
-                    ]
-                ]
+                    ],
+                ],
             ]);
     }
 }
