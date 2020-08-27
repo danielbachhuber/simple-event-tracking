@@ -19,9 +19,3 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
-
-<IfModule mod_headers.c>
-    Header add Access-Control-Allow-Origin "*"
-    Header add Access-Control-Allow-Headers: "Content-Type"
-    Header add Access-Control-Allow-Methods: "POST,OPTIONS"
-</IfModule>
