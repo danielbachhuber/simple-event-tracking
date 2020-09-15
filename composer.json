@@ -11,7 +11,7 @@
     "require": {
         "php": "^7.2.5",
         "fideloper/proxy": "^4.2",
-        "laravel/framework": "^7.25",
+        "laravel/framework": "^8.3",
         "laravel/tinker": "^2.0",
         "sentry/sentry-laravel": "^1.7",
         "fruitcake/laravel-cors": "^2.0",
