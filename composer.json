@@ -13,7 +13,7 @@
         "fideloper/proxy": "^4.2",
         "laravel/framework": "^7.25",
         "laravel/tinker": "^2.0",
-        "sentry/sentry-laravel": "^1.7",
+        "sentry/sentry-laravel": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3"
     },
