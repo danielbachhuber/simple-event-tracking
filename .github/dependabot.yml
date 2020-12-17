@@ -3,12 +3,14 @@ updates:
 - package-ecosystem: composer
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
     timezone: America/Los_Angeles
+    day: tuesday
   open-pull-requests-limit: 99
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
     timezone: America/Los_Angeles
+    day: tuesday
   open-pull-requests-limit: 99
