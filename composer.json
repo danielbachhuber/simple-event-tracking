@@ -11,11 +11,11 @@
     "require": {
         "php": "^7.3",
         "fideloper/proxy": "^4.2",
-        "laravel/framework": "^8.3",
-        "laravel/tinker": "^2.0",
-        "sentry/sentry-laravel": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1"
+        "guzzlehttp/guzzle": "^7.0.1",
+        "laravel/framework": "^8.32",
+        "laravel/tinker": "^2.0",
+        "sentry/sentry-laravel": "^2.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.5",
