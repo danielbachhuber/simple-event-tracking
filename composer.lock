@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d316949468979f1304e84bb0f699efc",
+    "content-hash": "302ad702fa3d6a36a6fb1f699309f20d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1098,16 +1098,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.31.0",
+            "version": "v8.32.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2aa5c2488d25178ebc097052c7897a0e463ddc35"
+                "reference": "7c37b64f8153c16b6406f5c28cf37828ebbe8846"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2aa5c2488d25178ebc097052c7897a0e463ddc35",
-                "reference": "2aa5c2488d25178ebc097052c7897a0e463ddc35",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/7c37b64f8153c16b6406f5c28cf37828ebbe8846",
+                "reference": "7c37b64f8153c16b6406f5c28cf37828ebbe8846",
                 "shasum": ""
             },
             "require": {
@@ -1262,7 +1262,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-03-04T15:22:36+00:00"
+            "time": "2021-03-09T15:37:45+00:00"
         },
         {
             "name": "laravel/tinker",
