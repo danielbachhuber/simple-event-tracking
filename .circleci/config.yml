@@ -21,7 +21,7 @@ jobs:
           command: |
             sudo docker-php-ext-install bcmath
             sudo docker-php-ext-install pdo_mysql
-            sudo apt-get update -y && sudo apt-get install mariadb-client-10.3
+            sudo apt-get update -y && sudo apt-get install mariadb-client-10.5
       - run:
           name: "Set Up Environment Variables"
           command: |
