@@ -13,7 +13,7 @@
         "cross-env": "^7.0",
         "laravel-mix": "^6.0.43",
         "lodash": "^4.17.21",
-        "postcss": "^8.4.8",
+        "postcss": "^8.4.12",
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.49.9",
         "sass-loader": "^12.6.0"
