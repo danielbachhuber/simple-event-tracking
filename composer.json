@@ -15,7 +15,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.32",
         "laravel/tinker": "^2.0",
-        "sentry/sentry-laravel": "^2.0"
+        "sentry/sentry-laravel": "^3.2"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.5",
